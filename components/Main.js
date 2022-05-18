@@ -69,9 +69,13 @@ export default function Main({ members }) {
             ></img>
             <p className='text-center text-gray-600 text-lg'>{member.login}</p>
             {member.login === 'ElioenaiFerrari' && (
-              <p className='text-center font-bold text-gray-900 text-md'>
+              <a
+                href='https://elioenai-ferrari.vercel.app'
+                target='_blank'
+                className='text-center font-bold text-gray-900 text-md transition duration-500 ease-in-out hover:text-gray-700 hover:underline'
+              >
                 Founder
-              </p>
+              </a>
             )}
           </div>
         ))}

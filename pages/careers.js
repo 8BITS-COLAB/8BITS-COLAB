@@ -1,15 +1,16 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import Data from '../data.json';
 
 export default function Careers() {
   return (
     <div className='text-black'>
       <NextSeo
-        title='Careers: nine4'
-        description='Welcome to nine4 homepage.'
-        canonical='https://nine4-2.vercel.app/'
+        title={`Careers: ${Data.components.header.company}`}
+        description='Careers page for all our members'
+        canonical='https://8bits-inc.vercel.app/careers'
         openGraph={{
-          url: 'https://nine4-2.vercel.app/',
+          url: 'https://8bits-inc.vercel.app/careers',
         }}
       />
       <Head>
@@ -20,10 +21,10 @@ export default function Careers() {
         <div className='max-w-6xl mx-auto px-4 sm:px-6 text-center'>
           <div className='py-24 md:py-36'>
             <h3 className='mb-5 text-6xl Avenir font-semibold text-gray-900'>
-              Envie seu currículo
+              {Data.pages.careers.title}
             </h3>
             <p className='mb-9 text-2xl font-semibold text-gray-600'>
-              Logo abaixo poderá anexar seu melhor currículo.
+              {Data.pages.careers.subtitle}
             </p>
 
             <label

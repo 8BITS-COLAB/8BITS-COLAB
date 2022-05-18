@@ -16,6 +16,7 @@ export default function Footer() {
                     <a
                       className='hover:text-gray-900 transition-colors duration-200 text-2xl'
                       href={item.src}
+                      target='_blank'
                     >
                       {item.title}
                     </a>
