@@ -23,7 +23,7 @@ export default function Home({ members }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await nextApi.get('/api/github');
 
   return {
