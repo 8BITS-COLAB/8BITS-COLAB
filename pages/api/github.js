@@ -6,9 +6,18 @@ import { githubApi } from '../../config/github-api';
  * @param {NextApiResponse} res
  */
 export default async (req, res) => {
-  if (req.method === 'GET') {
-    const response = await githubApi.get('/orgs/8BITS-Inc/public_members');
+  try {
+    if (req.method === 'GET') {
+      const response = await githubApi.get('/orgs/8BITS-Inc/public_members');
 
-    return res.status(200).json(response.data);
+      res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=1200, stale-while-revalidate=600'
+      );
+
+      return res.status(200).json(response.data);
+    }
+  } catch ({ message }) {
+    return res.status(500).json({ message });
   }
 };
