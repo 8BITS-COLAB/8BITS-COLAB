@@ -23,6 +23,11 @@
         "title": "Some of our collaborators",
         "subtitle": "We are always looking for new collaborations",
         "items": []
+      },
+      "newsletter": {
+        "title": "Subscribe to our newsletter",
+        "subtitle": "Get updates about our latest projects and collaborations",
+        "button": "Subscribe"
       }
     },
     "footer": {

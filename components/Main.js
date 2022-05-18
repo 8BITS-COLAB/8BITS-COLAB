@@ -1,8 +1,6 @@
 import Data from '../data.json';
 
 export default function Main({ members }) {
-  console.log(members);
-
   return (
     <section className='text-gray-600 body-font'>
       <div className='max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
@@ -65,22 +63,28 @@ export default function Main({ members }) {
             className='container flex flex-col items-center justify-center mx-auto rounded-lg'
           >
             <img
-              className='object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md'
+              className='clip-circle w-32 h-32 rounded-full mb-4'
               alt='Placeholder Image'
-              src='https://pbs.twimg.com/media/EFj4DNdW4AEsLts?format=jpg&name=large'
+              src={member.avatar_url}
             ></img>
+            <p className='text-center text-gray-600 text-lg'>{member.login}</p>
+            {member.login === 'ElioenaiFerrari' && (
+              <p className='text-center font-bold text-gray-900 text-md'>
+                Founder
+              </p>
+            )}
           </div>
         ))}
       </div>
       <section className='relative'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 text-center'>
           <div className='py-24 md:py-36'>
-            <h1 className='mb-5 text-6xl Avenir font-semibold text-gray-900'>
-              Se inscreva para receber nossas novidades
-            </h1>
-            <h1 className='mb-9 text-2xl font-semibold text-gray-600'>
-              Digite seu email e receba novos conteúdos
-            </h1>
+            <h3 className='mb-5 text-6xl Avenir font-semibold text-gray-900'>
+              {Data.components.main.newsletter.title}
+            </h3>
+            <p className='mb-9 text-2xl font-semibold text-gray-600'>
+              {Data.components.main.newsletter.subtitle}
+            </p>
             <input
               placeholder='john.doe@gmail.com'
               name='email'
@@ -92,7 +96,9 @@ export default function Main({ members }) {
               className='inline-flex items-center px-14 py-3 mt-2 ml-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900'
               href='/'
             >
-              <span className='justify-center'>Inscreva-se</span>
+              <span className='justify-center'>
+                {Data.components.main.newsletter.button}
+              </span>
             </a>
           </div>
         </div>
