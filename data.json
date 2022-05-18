@@ -1,0 +1,64 @@
+{
+  "components": {
+    "header": {
+      "company": "8BITS INC",
+      "navItems": [
+        { "title": "Careers", "src": "/careers" },
+        { "title": "About", "src": "/about" }
+      ],
+      "contactUs": "Contact us"
+    },
+    "main": {
+      "presentation": {
+        "title": "8BITS INC is a collaborative group passionate about technology.",
+        "subtitle": "Participate in opensource projects, meet new communities and contribute to the careers of other byters",
+        "button": "Learn more",
+        "imageSrc": "https://jingculturecommerce.com/wp-content/uploads/2020/12/blockchain-art.jpg"
+      },
+      "projects": {
+        "title": "Some of our projects",
+        "items": []
+      },
+      "collaborators": {
+        "title": "Some of our collaborators",
+        "subtitle": "We are always looking for new collaborations",
+        "items": []
+      }
+    },
+    "footer": {
+      "topics": [
+        {
+          "title": "Company",
+          "items": [
+            { "title": "Careers", "src": "/careers" },
+            { "title": "Services", "src": "/services" },
+            { "title": "Events", "src": "/events" }
+          ]
+        },
+        {
+          "title": "Social",
+          "items": [
+            { "title": "Instagram", "src": "/careers" },
+            { "title": "Linkedin", "src": "/services" },
+            { "title": "Owner", "src": "/events" }
+          ]
+        }
+      ],
+      "policies": [
+        {
+          "title": "Terms of service",
+          "src": "/terms-of-use"
+        },
+        {
+          "title": "Privacy policy",
+          "src": "/privacy-policy"
+        },
+        {
+          "title": "Cookie policy",
+          "src": "/cookie-policy"
+        }
+      ],
+      "copyright": "Copyright © 2022 8BITS INC. All rights reserved."
+    }
+  }
+}

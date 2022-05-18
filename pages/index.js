@@ -1,27 +1,34 @@
-import Head from "next/head";
-import Header from "../components/Header";
-import Main from "../components/Main";
-import Footer from "../components/Footer";
-import { NextSeo } from "next-seo";
+import Head from 'next/head';
+import Main from '../components/Main';
+import { NextSeo } from 'next-seo';
+import { nextApi } from '../config/next-api';
 
-export default function Home() {
+export default function Home({ members }) {
   return (
-    <div className="text-black">
+    <div className='text-black'>
       <NextSeo
-        title="Home: nine4"
-        description="Welcome to nine4 homepage."
-        canonical="https://nine4-2.vercel.app/"
+        title='Home: Intelliway'
+        description='Welcome to Intelliway homepage.'
+        canonical='https://Intelliway-2.vercel.app/'
         openGraph={{
-          url: "https://nine4-2.vercel.app/",
+          url: 'https://Intelliway-2.vercel.app/',
         }}
       />
       <Head>
-        <title>nine4</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Intelliway</title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header />
-      <Main />
-      <Footer />
+      <Main members={members} />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const response = await nextApi.get('/api/github');
+
+  return {
+    props: {
+      members: response.data,
+    },
+  };
 }

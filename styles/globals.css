@@ -25,9 +25,8 @@ a {
 }
 
 @font-face {
-  font-family: "AvenirNextW10-Bold";
-  src: url("../public/fonts/AvenirNext.ttf");
-
+  font-family: 'AvenirNextW10-Bold';
+  src: url('../public/fonts/AvenirNext.ttf');
 }
 
 .Avenir {
@@ -46,7 +45,7 @@ a {
 
 .greyC {
   filter: gray;
-  -webkit-filter: grayscale(100%); 
+  -webkit-filter: grayscale(100%);
   transition: 0.4s;
 }
 
