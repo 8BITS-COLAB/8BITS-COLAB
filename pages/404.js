@@ -3,20 +3,21 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { NextSeo } from 'next-seo';
+import Data from '../data.json';
 
 export default function Contact() {
   return (
     <div className='text-black'>
       <NextSeo
-        title='404: Intelliway'
+        title={`404: ${Data.components.header.company}`}
         description='404 page for all our missing pages'
-        canonical='https://Intelliway-2.vercel.app/404'
+        canonical='https://8bits-inc.vercel.app/404'
         openGraph={{
-          url: 'https://Intelliway-2.vercel.app/404',
+          url: 'https://8bits-inc.vercel.app/404',
         }}
       />
       <Head>
-        <title>Intelliway</title>
+        <title>{Data.components.header.company}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />

@@ -57,7 +57,7 @@ export default function Header() {
         >
           <nav className='flex-col flex-grow '>
             <ul className='flex flex-grow justify-end flex-wrap items-center'>
-              {Data.components.header.navItems.map((navItem, index) => (
+              {Data.components.header.navItems?.map((navItem, index) => (
                 <li key={index}>
                   <div className='font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out'>
                     <Link href={navItem.src}>{navItem.title}</Link>

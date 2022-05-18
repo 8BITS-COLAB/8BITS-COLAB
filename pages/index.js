@@ -1,21 +1,22 @@
 import Head from 'next/head';
 import Main from '../components/Main';
 import { NextSeo } from 'next-seo';
-import { nextApi } from '../config/next-api';
+import { githubApi } from '../config/github-api';
+import Data from '../data.json';
 
 export default function Home({ members }) {
   return (
     <div className='text-black'>
       <NextSeo
-        title='Home: Intelliway'
-        description='Welcome to Intelliway homepage.'
-        canonical='https://Intelliway-2.vercel.app/'
+        title={`Home: ${Data.components.header.company}`}
+        description='Home page for all our members'
+        canonical='https://8bits-inc.vercel.app'
         openGraph={{
-          url: 'https://Intelliway-2.vercel.app/',
+          url: 'https://8bits-inc.vercel.app',
         }}
       />
       <Head>
-        <title>Intelliway</title>
+        <title>{Data.components.header.company}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Main members={members} />
@@ -23,8 +24,8 @@ export default function Home({ members }) {
   );
 }
 
-export async function getServerSideProps() {
-  const response = await nextApi.get('/api/github');
+export async function getStaticProps() {
+  const response = await githubApi.get('/orgs/8BITS-Inc/public_members');
 
   return {
     props: {

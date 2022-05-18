@@ -1,7 +1,4 @@
 module.exports = {
-  env: {
-    HOST: process.env.HOST,
-  },
   future: {
     strictPostcssConfiguration: true,
   },
