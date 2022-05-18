@@ -24,8 +24,13 @@ export default function Home({ members }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps({ req, res }) {
   const response = await githubApi.get('/orgs/8BITS-Inc/public_members');
+
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=1200, stale-while-revalidate=600'
+  );
 
   return {
     props: {
