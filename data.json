@@ -32,8 +32,6 @@
         {
           "title": "Social",
           "items": [
-            { "title": "Instagram", "src": "/" },
-            { "title": "Linkedin", "src": "/" },
             { "title": "GitHub", "src": "https://github.com/8BITS-Inc" }
           ]
         }
