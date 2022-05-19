@@ -1,6 +1,6 @@
 import Data from '../data.json';
 
-export default function Main({ members }) {
+export default function Main({ members, repos }) {
   return (
     <section className='text-gray-600 body-font'>
       <div className='max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
@@ -38,13 +38,20 @@ export default function Main({ members }) {
             </h1>
           </div>
           <div className='grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4'>
-            {Data.components.main.projects.items.map((project, index) => (
+            {repos?.map((repo, index) => (
               <div key={index} className='flex items-center justify-center'>
-                <img
-                  src={project.imageSrc}
-                  alt='Google Logo'
-                  className='block object-contain h-16 greyC'
-                ></img>
+                <a
+                  href={repo.html_url}
+                  target='_blank'
+                  className='text-lg text-gray-900 transition'
+                >
+                  <h3 className='text-lg text-gray-900 transition'>
+                    {repo.name}
+                  </h3>
+                  <p className='text-sm font-bold text-gray-600 transition'>
+                    {repo.description}
+                  </p>
+                </a>
               </div>
             ))}
           </div>

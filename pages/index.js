@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import { githubApi } from '../config/github-api';
 import Data from '../data.json';
 
-export default function Home({ members }) {
+export default function Home({ members, repos }) {
   return (
     <div className='text-black'>
       <NextSeo
@@ -19,13 +19,19 @@ export default function Home({ members }) {
         <title>{Data.components.header.company}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Main members={members} />
+      <Main members={members} repos={repos} />
     </div>
   );
 }
 
-export async function getServerSideProps({ req, res }) {
-  const response = await githubApi.get('/orgs/8BITS-Inc/public_members');
+export async function getServerSideProps({ res }) {
+  const { data: members } = await githubApi.get(
+    '/orgs/8BITS-Inc/public_members?per_page=10'
+  );
+
+  const { data: repos } = await githubApi.get(
+    'orgs/8BITS-Inc/repos?per_page=10'
+  );
 
   res.setHeader(
     'Cache-Control',
@@ -34,7 +40,8 @@ export async function getServerSideProps({ req, res }) {
 
   return {
     props: {
-      members: response.data,
+      members,
+      repos,
     },
   };
 }
