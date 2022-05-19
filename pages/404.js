@@ -11,9 +11,9 @@ export default function Contact() {
       <NextSeo
         title={`404: ${Data.components.header.company}`}
         description='404 page for all our missing pages'
-        canonical='https://8bits-inc.vercel.app/404'
+        canonical='https://8bits-colab.vercel.app/404'
         openGraph={{
-          url: 'https://8bits-inc.vercel.app/404',
+          url: 'https://8bits-colab.vercel.app/404',
         }}
       />
       <Head>

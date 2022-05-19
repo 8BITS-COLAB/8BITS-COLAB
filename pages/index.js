@@ -10,9 +10,9 @@ export default function Home({ members, repos }) {
       <NextSeo
         title={`Home: ${Data.components.header.company}`}
         description='Home page for all our members'
-        canonical='https://8bits-inc.vercel.app'
+        canonical='https://8bits-colab.vercel.app'
         openGraph={{
-          url: 'https://8bits-inc.vercel.app',
+          url: 'https://8bits-colab.vercel.app',
         }}
       />
       <Head>
@@ -26,11 +26,11 @@ export default function Home({ members, repos }) {
 
 export async function getServerSideProps({ res }) {
   const { data: members } = await githubApi.get(
-    '/orgs/8BITS-Inc/public_members?per_page=10'
+    '/orgs/8BITS-COLAB/public_members?per_page=10'
   );
 
   const { data: repos } = await githubApi.get(
-    'orgs/8BITS-Inc/repos?per_page=10'
+    '/orgs/8BITS-COLAB/repos?per_page=10'
   );
 
   res.setHeader(

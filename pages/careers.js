@@ -8,9 +8,9 @@ export default function Careers() {
       <NextSeo
         title={`Careers: ${Data.components.header.company}`}
         description='Careers page for all our members'
-        canonical='https://8bits-inc.vercel.app/careers'
+        canonical='https://8bits-colab.vercel.app/careers'
         openGraph={{
-          url: 'https://8bits-inc.vercel.app/careers',
+          url: 'https://8bits-colab.vercel.app/careers',
         }}
       />
       <Head>
