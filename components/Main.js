@@ -45,10 +45,10 @@ export default function Main({ members, repos }) {
                 target='_blank'
                 className='border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center hover:shadow-lg transition duration-500 ease-in-out transform hover:scale-105'
               >
-                <h3 className='text-lg text-gray-900 transition'>
+                <h3 className='text-center text-gray-600 text-lg'>
                   {repo.name}
                 </h3>
-                <p className='text-sm font-bold text-gray-600 transition'>
+                <p className='text-center font-bold text-gray-900 text-md'>
                   {repo.description}
                 </p>
               </a>
