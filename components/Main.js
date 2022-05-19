@@ -74,15 +74,17 @@ export default function Main({ members, repos }) {
               src={member.avatar_url}
             ></img>
             <p className='text-center text-gray-600 text-lg'>{member.login}</p>
-            {member.login === 'ElioenaiFerrari' && (
-              <a
-                href='https://elioenai-ferrari.vercel.app'
-                target='_blank'
-                className='text-center font-bold text-gray-900 text-md transition duration-500 ease-in-out hover:text-gray-700 hover:underline'
-              >
-                Founder
-              </a>
-            )}
+            <a
+              href={
+                member.login === 'ElioenaiFerrari'
+                  ? 'https://elioenai-ferrari.vercel.app'
+                  : member.html_url
+              }
+              target='_blank'
+              className='text-center font-bold text-gray-900 text-md transition duration-500 ease-in-out hover:text-gray-700 hover:underline'
+            >
+              {member.login === 'ElioenaiFerrari' ? 'Founder' : 'Collaborator'}
+            </a>
           </div>
         ))}
       </div>
