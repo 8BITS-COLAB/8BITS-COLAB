@@ -39,20 +39,19 @@ export default function Main({ members, repos }) {
           </div>
           <div className='grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4'>
             {repos?.map((repo, index) => (
-              <div key={index} className='flex items-center justify-center'>
-                <a
-                  href={repo.html_url}
-                  target='_blank'
-                  className='text-lg text-gray-900 transition'
-                >
-                  <h3 className='text-lg text-gray-900 transition'>
-                    {repo.name}
-                  </h3>
-                  <p className='text-sm font-bold text-gray-600 transition'>
-                    {repo.description}
-                  </p>
-                </a>
-              </div>
+              <a
+                key={index}
+                href={repo.html_url}
+                target='_blank'
+                className='border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center hover:shadow-lg transition duration-500 ease-in-out transform hover:scale-105'
+              >
+                <h3 className='text-lg text-gray-900 transition'>
+                  {repo.name}
+                </h3>
+                <p className='text-sm font-bold text-gray-600 transition'>
+                  {repo.description}
+                </p>
+              </a>
             ))}
           </div>
         </div>
