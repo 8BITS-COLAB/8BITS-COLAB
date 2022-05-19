@@ -1,13 +1,13 @@
 {
   "components": {
     "header": {
-      "company": "8BITS INC",
+      "company": "8BITS COLAB",
       "navItems": [{ "title": "About", "src": "/about" }],
       "contactUs": "Contact us"
     },
     "main": {
       "presentation": {
-        "title": "8BITS INC is a collaborative group passionate about technology.",
+        "title": "8BITS COLAB is a collaborative group passionate about technology.",
         "subtitle": "Participate in open-source projects, meet new communities and contribute to the careers of other byters",
         "button": "Learn more",
         "imageSrc": "https://cdn-icons-png.flaticon.com/512/37/37737.png?w=360"
@@ -50,7 +50,7 @@
           "src": "/cookie-policy"
         }
       ],
-      "copyright": "Copyright © 2022 8BITS INC. All rights reserved."
+      "copyright": "Copyright © 2022 8BITS COLAB. All rights reserved."
     }
   },
   "pages": {
