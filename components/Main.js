@@ -24,7 +24,7 @@ export default function Main({ members }) {
         </div>
         <div className='xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10'>
           <img
-            className='w-80 h-80 md:ml-1 ml-24 rounded-lg shadow-md object-cover object-center'
+            className='w-80 md:ml-1 ml-24 rounded-lg'
             alt='iPhone-12'
             src={Data.components.main.presentation.imageSrc}
           ></img>
