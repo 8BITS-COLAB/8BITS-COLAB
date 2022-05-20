@@ -65,7 +65,7 @@ export default function Header() {
                 </li>
               ))}
 
-              <li>
+              {/* <li>
                 <a
                   className='inline-flex items-center px-4 py-2 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent rounded-lg text-md md:mt-0 md:ml-4 bg-gray-900'
                   href='/'
@@ -84,7 +84,7 @@ export default function Header() {
                     />
                   </svg>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
