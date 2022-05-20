@@ -63,30 +63,36 @@ export default function Main({ members, repos }) {
         <p className='mb-8 text-1xl Avenir font-semibold text-gray-600 text-center'>
           {Data.components.main.collaborators.subtitle}
         </p>
-        {members?.map((member, index) => (
-          <div
-            key={index}
-            className='container flex flex-col items-center justify-center mx-auto rounded-lg'
-          >
-            <img
-              className='clip-circle w-32 h-32 rounded-full mb-4'
-              alt='Placeholder Image'
-              src={member.avatar_url}
-            ></img>
-            <p className='text-center text-gray-600 text-lg'>{member.login}</p>
-            <a
-              href={
-                member.login === 'ElioenaiFerrari'
-                  ? 'https://elioenai-ferrari.vercel.app'
-                  : member.html_url
-              }
-              target='_blank'
-              className='text-center font-bold text-gray-900 text-md transition duration-500 ease-in-out hover:text-gray-700 hover:underline'
+        <div className='flex flex-row items-center justify-center mx-auto'>
+          {members?.map((member, index) => (
+            <div
+              key={index}
+              className='container flex flex-col items-center justify-center mx-auto rounded-lg'
             >
-              {member.login === 'ElioenaiFerrari' ? 'Founder' : 'Collaborator'}
-            </a>
-          </div>
-        ))}
+              <img
+                className='clip-circle w-32 h-32 rounded-full mb-4'
+                alt='Placeholder Image'
+                src={member.avatar_url}
+              ></img>
+              <p className='text-center text-gray-600 text-lg'>
+                {member.login}
+              </p>
+              <a
+                href={
+                  member.login === 'ElioenaiFerrari'
+                    ? 'https://elioenai-ferrari.vercel.app'
+                    : member.html_url
+                }
+                target='_blank'
+                className='text-center font-bold text-gray-900 text-md transition duration-500 ease-in-out hover:text-gray-700 hover:underline'
+              >
+                {member.login === 'ElioenaiFerrari'
+                  ? 'Founder'
+                  : 'Collaborator'}
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
       <section className='relative'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 text-center'>

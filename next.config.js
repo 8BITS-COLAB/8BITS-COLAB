@@ -1,4 +1,7 @@
+const withImages = require('next-images');
+
 module.exports = {
+  ...withImages(),
   future: {
     strictPostcssConfiguration: true,
   },

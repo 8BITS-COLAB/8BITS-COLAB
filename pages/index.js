@@ -25,23 +25,27 @@ export default function Home({ members, repos }) {
 }
 
 export async function getServerSideProps({ res }) {
-  const { data: members } = await githubApi.get(
-    '/orgs/8BITS-COLAB/public_members?per_page=10'
-  );
+  const props = {};
 
-  const { data: repos } = await githubApi.get(
-    '/orgs/8BITS-COLAB/repos?per_page=10'
-  );
+  try {
+    const { data: members } = await githubApi.get(
+      '/orgs/8BITS-COLAB/public_members?per_page=10'
+    );
+
+    const { data: repos } = await githubApi.get(
+      '/orgs/8BITS-COLAB/repos?per_page=10'
+    );
+
+    props.members = members;
+    props.repos = repos;
+  } catch ({ message }) {
+    console.error({ message });
+  }
 
   res.setHeader(
     'Cache-Control',
     'public, s-maxage=1200, stale-while-revalidate=600'
   );
 
-  return {
-    props: {
-      members,
-      repos,
-    },
-  };
+  return { props };
 }
