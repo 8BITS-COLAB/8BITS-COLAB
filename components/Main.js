@@ -16,7 +16,7 @@ export default function Main({ members, repos }) {
 
     try {
       setIsLoading(true);
-      await fetch(`https://8bits-colab.vercel.com/api/be-a-member`, {
+      await fetch(`https://8bits-colab.vercel.app/api/be-a-member`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
