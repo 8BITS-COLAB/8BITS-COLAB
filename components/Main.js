@@ -115,7 +115,7 @@ export default function Main({ members, repos }) {
         <p className='mb-8 text-1xl Avenir font-semibold text-gray-600 text-center'>
           {Data.components.main.collaborators.subtitle}
         </p>
-        <div className='flex flex-row items-center justify-center mx-auto'>
+        <div className='grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4'>
           {members?.map((member, index) => (
             <div
               key={index}
