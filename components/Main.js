@@ -63,7 +63,7 @@ export default function Main({ members, repos }) {
           <p className='mb-4 xl:w-3/4 text-gray-600 text-lg'>
             {Data.components.main.presentation.subtitle}
           </p>
-          <div className='flex justify-center'>
+          {/* <div className='flex justify-center'>
             <a
               className='inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900'
               href='/'
@@ -72,12 +72,12 @@ export default function Main({ members, repos }) {
                 {Data.components.main.presentation.button}
               </span>
             </a>
-          </div>
+          </div> */}
         </div>
         <div className='xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10'>
           <img
             className='w-80 md:ml-1 ml-24 rounded-lg'
-            alt='iPhone-12'
+            alt='hero'
             src={Data.components.main.presentation.imageSrc}
           ></img>
         </div>
