@@ -8,11 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@elioenaiferrari/dachshund-js": "^1.0.1",
     "autoprefixer": "^10.2.3",
     "axios": "^0.27.2",
     "next": "10.0.5",
     "next-seo": "^4.18.0",
-    "nodemailer": "^6.7.5",
     "npm": "^6.14.11",
     "postcss": "^8.2.4",
     "react": "17.0.1",

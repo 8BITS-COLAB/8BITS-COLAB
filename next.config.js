@@ -2,12 +2,6 @@ const withImages = require('next-images');
 
 module.exports = {
   ...withImages(),
-  env: {
-    SMTP_HOST: process.env.SMTP_HOST,
-    SMTP_PORT: process.env.SMTP_PORT,
-    SMTP_EMAIL: process.env.SMTP_USER,
-    SMTP_PASS: process.env.SMTP_PASS,
-  },
   future: {
     strictPostcssConfiguration: true,
   },
